@@ -49,7 +49,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  ) : <h1>waiting for permission...</h1>;
+  ) : <h1>waiting for location permission...</h1>;
 }
 
 export default App
