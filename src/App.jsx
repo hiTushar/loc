@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import handleSubmit from './handles/handleSubmit'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,7 +17,8 @@ function App() {
   function success(position) {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
-    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+    if(latitude) setLocation(1);
+    handleSubmit({ latitude, longitude });
     setLocation(1);
   }
   
